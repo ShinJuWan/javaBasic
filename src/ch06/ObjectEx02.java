@@ -1,0 +1,32 @@
+package ch06;
+
+class ±Ã¼ö {
+	String name = "±Ã¼ö";
+}
+
+class Àü»ç {
+	String name = "Àü»ç";
+}
+
+public class ObjectEx02 {
+
+	public static void main(String[] args) {
+		±Ã¼ö[] s1 = new ±Ã¼ö [2];
+		s1[0] = new ±Ã¼ö();
+		s1[1] = new ±Ã¼ö();
+		
+		System.out.println(s1[0].name);
+		System.out.println(s1[1].name);
+		
+		Object[] o1 = new Object [2];
+		o1[0] = new ±Ã¼ö();
+		o1[1] = new Àü»ç();
+		
+		// ´ÜÁ¡ - ´Ù¿îÄ³½ºÆÃ!!
+		±Ã¼ö g1 = (±Ã¼ö)o1[0];
+		Àü»ç g2 = (Àü»ç)o1[1];
+		
+		System.out.println(g1.name);
+		System.out.println(g2.name);
+	}
+}
